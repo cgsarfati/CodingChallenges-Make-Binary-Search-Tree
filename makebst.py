@@ -145,6 +145,24 @@ def make_bst(nums):
     Returns the root node of a new BST that is valid and balanced.
     """
 
+    ### BASE
+    if not nums:
+        return None
+
+    ### PROGRESSION
+
+    # Find midpoint
+    midpoint = len(nums) / 2
+
+    # Initialize initial node in BST
+    node = BinaryNode(nums[midpoint])
+
+    # Build up BST to L/R of midpoints
+    node.left = make_bst(nums[:midpoint])
+    node.right = make_bst(nums[midpoint + 1:])
+
+    return node
+
 
 if __name__ == '__main__':
     import doctest
