@@ -124,6 +124,11 @@ And [1..6]:
 By Joel Burton <joel@hackbrightacademy.com>
 """
 
+# Brainstorm:
+    # Lst sorted for REASON
+        # Find midpoint, then recurse left and right -- order matters (L 1st)
+        # Need lst splicing during recursive call
+
 
 class BinaryNode(object):
     """Node in a binary tree."""
